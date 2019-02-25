@@ -1,0 +1,65 @@
+<div class="container" *ngIf="!waiting">
+  <h1>New Film</h1>
+    <form>
+    <div class="form-group">
+      <label for="title">title</label>
+
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        required
+        [(ngModel)]="film.title"
+      />
+      <label for="description">description</label>
+
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        name="description"
+        required
+        [(ngModel)]="film.description"
+      />
+
+      <label for="originalLanguage">original language</label>
+
+      <input
+        type="text"
+        class="form-control"
+        id="originalLanguage"
+        name="originalLanguage"
+        required
+        [(ngModel)]="film.originalLanguage"
+      />
+      <label for="director">director</label>
+
+      <input
+        type="text"
+        class="form-control"
+        id="director"
+        name="director"
+        required
+        [(ngModel)]="film.director"
+      />
+      <label for="image">image</label>
+
+      <input
+        type="text"
+        class="form-control"
+        id="image"
+        name="image"
+        required
+        [(ngModel)]="film.image"
+      />
+    </div>
+
+    <button type="button" class="btn btn-default" (click)="createFilm()">Create Film</button>
+  </form>
+</div>
+<div class="container" *ngIf="waiting">
+
+  C R E A T I N G ...
+
+</div>

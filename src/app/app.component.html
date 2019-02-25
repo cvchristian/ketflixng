@@ -1,0 +1,15 @@
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+  <img
+    width="300"
+    alt="Ketflix Logo"
+    src="../assets/ketflix.png"
+  />
+</div>
+
+<app-alerts></app-alerts>
+<nav>
+  <button [routerLink]="['/films']" routerLinkActive="router-link-active" >Films List</button>
+</nav>
+<nav><button [routerLink]="['/newfilm']" routerLinkActive="router-link-active" >New film</button></nav>
+<router-outlet></router-outlet>
